@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       fd.append('picture', this.picture, this.picture.name);
     }
 
-    this.http.post('http://localhost:8000/api/users/upload', fd).subscribe((res) => {
+    this.http.post('https://newvouchme-api.herokuapp.com/api/users/upload', fd).subscribe((res) => {
       console.log('response', res);
     })
     console.log(this.form);
